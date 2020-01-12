@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import { Nav, Brand, BrandLink, MCLogo } from  '../../styles/styledComponents'
+import { Brand, BrandLink } from  '../../styles/styledComponents'
+import { Navbar, NavbarToggler } from 'reactstrap';
 
 const NavBar = () => {
+  const [collapsed, setCollapsed] = useState(true)
+
+  const toggleNavbar = () => setCollapsed(!collapsed) 
 
   return(
-    <Nav height={'4rem'} justifyContent={'flex-end'}>
+    <Navbar>
         <Brand href={'https://www.meetcleo.com/'}> <BrandLink> Cleo. </BrandLink> </Brand>
-        <Brand href={'/'}>  </Brand>
-    </Nav>
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+    </Navbar>
   )
 }
 
