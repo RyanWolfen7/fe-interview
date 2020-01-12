@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { Wrapper } from '../../styles/styledComponents'
 
-class App extends Component {
-  render() {
-    return (
-      <h1> Hello World </h1>
-    );
-  }
+
+const App = ({ children }) => {
+  return (
+    <>
+      <Wrapper>
+        <h1> Hello </h1> 
+      </Wrapper>
+    </>
+  )
+  
 }
 
 export default App;
