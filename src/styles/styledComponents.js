@@ -18,8 +18,9 @@ export const Wrapper = styled.div`
   width: 100%;
 `;
 
-export const Sony = styled.a`
-  color: white;
+export const BrandLink = styled.a`
+  color: black;
+  font-size: 2.5rem;
   padding: .5rem;
   font-family: Georgia, serif;
   font-weight: bold;
@@ -43,7 +44,7 @@ export const Brand = styled(NavbarBrand)`
   text-decoration: none;
 `
 
-export const PSLogo = styled.img`
+export const MCLogo = styled.img`
   height: 3.5rem;
   padding: 1rem;
   align-self: center;
