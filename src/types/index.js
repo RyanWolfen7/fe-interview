@@ -1,0 +1,3 @@
+export const GET_BILLS = 'GET_BILLS'
+export const GET_BILLS_SUCCESS = 'GET_BILLS_SUCCESS'
+export const GET_BILLS_FAILURE = 'GET_BILLS_FAILURE'
