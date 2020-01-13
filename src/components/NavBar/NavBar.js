@@ -9,9 +9,9 @@ const NavBar = () => {
 
   return(
     <div>
-    <Navbar>
+    <Navbar color="faded" light>
         <NavbarBrand href={'https://www.meetcleo.com/'}> <BrandLink> Cleo. </BrandLink> </NavbarBrand>
-        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <NavbarToggler onClick={toggleNavbar} className="mr-2"/>
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
               <NavItem>
@@ -19,6 +19,9 @@ const NavBar = () => {
               </NavItem>
               <NavItem>
                 <NavLink href='/bills'> Bills </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href='/potentialBills'> Potential Bills </NavLink>
               </NavItem>
           </Nav>
         </Collapse>

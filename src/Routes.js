@@ -14,6 +14,11 @@ export default () => {
         exact
         path={'/bills'}
       />
+      <Route
+        component={BillsList}
+        exact
+        path={'/potentialBills'}
+      />
     </Switch>
   )
 }
