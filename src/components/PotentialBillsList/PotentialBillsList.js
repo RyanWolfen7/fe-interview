@@ -27,7 +27,7 @@ const BillsList = props => {
       { isLoading && <img src={Loader} alt="...Loading"/> }
       { error && <Alert color="danger"> { error} </Alert>}
       { !isLoading && <FadeWrapper>
-        <Title> Bills </Title>
+        <Title> Possible Bills </Title>
         <BillsListContainer>
           { billsList && billsList.map( bill => {
             if ( !bill.isBill ) {
