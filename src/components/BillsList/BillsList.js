@@ -12,6 +12,7 @@ const BillsList = props => {
   const { isLoading, billsList, error } = useSelector( state => state.bills)
   const [ viewTransaction, setViewTransaction ] = useState({})
   const dispatch = useDispatch()
+  console.log(billsList)
 
   useEffect(() => {
     dispatch(actions.bills.getBills())
@@ -20,6 +21,12 @@ const BillsList = props => {
   const triggerTransations = (bill) => {
     let boolean = viewTransaction[bill] ? viewTransaction[bill] : false
     setViewTransaction({...viewTransaction, [bill]: !boolean})
+  }
+
+  const updateBill = async ( billId ) => {
+    let changedBill = billsList.find( bill => bill.id === billId)
+    changedBill.isBill = !changedBill.isBill
+    await dispatch(actions.bills.patchBill(changedBill))
   }
 
   return (
@@ -31,7 +38,7 @@ const BillsList = props => {
         <BillsListContainer>
           { billsList && billsList.map( bill => {
             if ( bill.isBill ) {
-              return BillsListCard(bill, viewTransaction, triggerTransations)
+              return BillsListCard(bill, viewTransaction, triggerTransations, updateBill)
             } else {
               return null
             }

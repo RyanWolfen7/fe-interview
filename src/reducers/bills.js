@@ -1,5 +1,6 @@
 import { 
-  GET_BILLS, GET_BILLS_SUCCESS, GET_BILLS_FAILURE
+  GET_BILLS, GET_BILLS_SUCCESS, GET_BILLS_FAILURE,
+  PATCH_BILLS, PATCH_BILLS_SUCCESS, PATCH_BILLS_FAILURE
 } from '../types'
 
 const initialState = {
@@ -28,6 +29,23 @@ export default ( state = initialState, action) => {
         error: action.error.response.data,
         isLoading: false
       }
+      case PATCH_BILLS:
+        return {
+          ...state,
+          isLoading: true
+        }
+      case PATCH_BILLS_SUCCESS:
+        return {
+          ...state,
+          data: action.payload.data,
+          isLoading: false
+        }
+      case PATCH_BILLS_FAILURE:
+        return {
+          ...state,
+          error: action.error.response.data,
+          isLoading: false
+        }
     default: 
       return state
   }

@@ -22,6 +22,12 @@ const BillsList = props => {
     setViewTransaction({...viewTransaction, [bill]: !boolean})
   }
 
+  const updateBill = async ( billId ) => {
+    let changedBill = billsList.find( bill => bill.id === billId)
+    changedBill.isBill = !changedBill.isBill
+    await dispatch(actions.bills.patchBill(changedBill))
+  }
+
   return (
     <MainContainer>
       { isLoading && <img src={Loader} alt="...Loading"/> }
@@ -31,7 +37,7 @@ const BillsList = props => {
         <BillsListContainer>
           { billsList && billsList.map( bill => {
             if ( !bill.isBill ) {
-              return BillsListCard(bill, viewTransaction, triggerTransations)
+              return BillsListCard(bill, viewTransaction, triggerTransations, updateBill)
             } else {
               return null
             }

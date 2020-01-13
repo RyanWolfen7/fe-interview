@@ -2,7 +2,7 @@ import React from 'react'
 import { CardImg, Card, CardFooter, CardHeader, Button} from 'reactstrap'
 import { CardWrapper } from '../../styles/styledComponents';
 
-const displayBills = ( bill, viewTransaction, triggerTransations ) => {
+const displayBills = ( bill, viewTransaction, triggerTransations, updateBill ) => {
   return (
     <Card key={ bill.id }>
       <CardWrapper>
@@ -15,6 +15,7 @@ const displayBills = ( bill, viewTransaction, triggerTransations ) => {
           })}
         </ul>
         { bill.iconUrl && <CardImg bottom height='100rem' width="50rem" src={bill.iconUrl} alt={''}/>}
+        <Button onClick={() => updateBill(bill.id)} block> { bill.isBill ? 'Remove Bill' : 'Add As A Bill'} </Button>
         <CardFooter>
           id: {bill.id} 
         </CardFooter>
