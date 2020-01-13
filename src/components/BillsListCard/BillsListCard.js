@@ -4,13 +4,13 @@ import { CardWrapper } from '../../styles/styledComponents';
 
 const displayBills = ( bill ) => {
   return (
-    <Card>
+    <Card key={ bill.id }>
       <CardWrapper>
         <CardHeader> { bill.name} </CardHeader>
         <ul> 
           Payments:
           { bill.transactions.map( transaction => {
-            return <li> { transaction.date }: ${ transaction.amount }</li>
+            return <li key={transaction.id}> { transaction.date }: ${ transaction.amount }</li>
           })}
         </ul>
         { bill.iconUrl && <CardImg bottom height='100rem' width="50rem" src={bill.iconUrl} alt={''}/>}
