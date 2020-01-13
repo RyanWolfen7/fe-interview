@@ -19,6 +19,9 @@ const Home = () => {
             <li> Refactor Code </li> 
             <li> Make Helpers to make the BillsList and PotentilBillsList more unique and less redundant ( Please Note that I seperated these two for future features and scalability)</li>
             <li> Major Styling Overhaul ( For time sake I stuck with the reactstrap )</li>
+            <li> Animations (I'm pretty good with CSS3)</li>
+            <li> How the Transactions show should be reworked</li>
+            <li> Optimize the code for run time</li>
             <li> More Appropriate Home Page</li>
           </CardText>
           <CardLink href="https://www.linkedin.com/in/ryan-clark-44b156127/">Linked In</CardLink>
