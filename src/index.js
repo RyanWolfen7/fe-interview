@@ -8,8 +8,6 @@ import { createGlobalStyle } from 'styled-components';
 import App from './components/App/App';
 import Routes from './Routes';
 
-console.log(store)
-
 const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;

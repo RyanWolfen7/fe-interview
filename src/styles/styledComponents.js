@@ -9,7 +9,10 @@ import {
   FormGroup,
   Input,
   Label,
-  Fade
+  Fade,
+  CardBody,
+  CardImg,
+
 } from 'reactstrap';
 import styled from 'styled-components';
 
@@ -121,7 +124,7 @@ export const MainContainer = styled.div`
 export const Title = styled.div`
 padding: 1rem;
   font-size: 45px;
-  color: #fff;
+  color: black;
   font-weight: 300;
   display: flex;
   justify-content: center;
@@ -130,4 +133,36 @@ padding: 1rem;
 export const FadeWrapper = styled(Fade)`
   height: 100%;
   color: white;
+`
+
+export const BillsListContainer = styled.div`
+  padding: 0rem;
+  margin: 0rem;
+  display: grid;
+  grid-template-columns: repeat(1, [col] auto) ;
+  grid-template-rows: repeat(auto, [row] auto  ); 
+  grid-gap: .1rem; 
+  width: auto;
+`
+
+export const CardImage = styled(CardImg)`
+  border-radius: .3rem
+  height: 80%;
+  width: 25%;
+`
+
+export const CardWrapper = styled(CardBody)`
+  height: auto;
+  width: 30rem;
+  justify-self: center;
+  border-radius: .3rem;
+  color: grey;
+`
+export const BillTitle = styled(Title)`
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: .8rem;
+  margin: 0;
+  padding: 0 0 10px;;
+  color: black;
 `

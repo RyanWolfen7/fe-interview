@@ -19,6 +19,7 @@ export default ( state = initialState, action) => {
     case GET_BILLS_SUCCESS:
       return {
         ...state,
+        billsList: action.payload.data,
         isLoading: false
       }
     case GET_BILLS_FAILURE:
