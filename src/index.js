@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import store from './store';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 import App from './components/App/App';
 import Routes from './Routes';

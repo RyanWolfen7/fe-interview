@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../NavBar/navBar';
+import NavBar from '../NavBar/NavBar';
 import { Wrapper } from '../../styles/styledComponents'
 
 
@@ -8,7 +8,7 @@ const App = ({ children }) => {
     <>
       <NavBar />
       <Wrapper>
-        <h1> Hello </h1> 
+        { children } 
       </Wrapper>
     </>
   )
