@@ -147,8 +147,9 @@ export const BillsListContainer = styled.div`
 
 export const CardImage = styled(CardImg)`
   border-radius: .3rem
-  height: 80%;
-  width: 25%;
+  height: 60%;
+  width: 40%;
+  align-self: center;
 `
 
 export const CardWrapper = styled(CardBody)`

@@ -1,8 +1,9 @@
 import React from 'react'
 import {
-  Card, CardImg, CardText, CardBody, CardLink, CardHeader
+  Card, CardText, CardBody, CardLink, CardHeader
 } from 'reactstrap';
 import Pic from '../../assets/welcome.jpg'
+import { CardImage } from '../../styles/styledComponents';
 
 const Home = () => {
 
@@ -10,7 +11,7 @@ const Home = () => {
     <div>
       <Card body inverse color="success">
       <CardHeader body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>Ryan Clarks Submission</CardHeader>
-        <CardImg width="100%" src={Pic} alt="Card image cap" />
+      <CardImage width="50%" src={Pic} alt="Card image cap" /> 
         <CardBody>
           <CardText> 
             {`Howdy Y'all,\n
