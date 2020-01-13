@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import BillsList from './components/BillsList/BillsList';
+import PotentialBillsList from './components/PotentialBillsList/PotentialBillsList';
 
 export default () => {
   return (
@@ -15,7 +16,7 @@ export default () => {
         path={'/bills'}
       />
       <Route
-        component={BillsList}
+        component={PotentialBillsList}
         exact
         path={'/potentialBills'}
       />
