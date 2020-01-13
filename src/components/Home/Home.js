@@ -9,11 +9,11 @@ const Home = () => {
 
   return (
     <div>
-      <Card body inverse color="success">
+      <Card body inverse style={{ backgroundColor: '#F6F7FA', borderColor: '#F6F7FA'}}>
       <CardHeader body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>Ryan Clarks Submission</CardHeader>
       <CardImage width="50%" src={Pic} alt="Card image cap" /> 
         <CardBody>
-          <CardText> 
+          <CardText body inverse style={{ color: 'black' }}> 
             {`Howdy Y'all,\n
             Just so you know I'm running out of time on this project and yet there is much more to do!!! I'm trying to stick to the alloted time. Unfortiontely my laptop needed a bit of a rest, but I managed to revive the poor beast with the aid of a computer repair shop. Some things to knock out at a later date are:`}
             <li> Refactor Code </li> 
