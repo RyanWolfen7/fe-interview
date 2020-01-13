@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router';
 import Loader from '../../assets/loader.gif'
@@ -10,11 +10,17 @@ import BillsListCard from '../BillsListCard/BillsListCard'
 
 const BillsList = props => {
   const { isLoading, billsList, error } = useSelector( state => state.bills)
+  const [ viewTransaction, setViewTransaction ] = useState({})
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(actions.bills.getBills())
   }, [])
+
+  const triggerTransations = (bill) => {
+    let boolean = viewTransaction[bill] ? viewTransaction[bill] : false
+    setViewTransaction({...viewTransaction, [bill]: !boolean})
+  }
 
   return (
     <MainContainer>
@@ -25,7 +31,7 @@ const BillsList = props => {
         <BillsListContainer>
           { billsList && billsList.map( bill => {
             if ( bill.isBill ) {
-              return BillsListCard(bill)
+              return BillsListCard(bill, viewTransaction, triggerTransations)
             } else {
               return null
             }
