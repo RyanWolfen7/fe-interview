@@ -12,7 +12,6 @@ const BillsList = props => {
   const { isLoading, billsList, error } = useSelector( state => state.bills)
   const [ viewTransaction, setViewTransaction ] = useState({})
   const dispatch = useDispatch()
-  console.log(billsList)
 
   useEffect(() => {
     dispatch(actions.bills.getBills())
